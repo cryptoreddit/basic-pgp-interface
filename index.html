@@ -27,7 +27,7 @@
       if (window.crypto.getRandomValues) {
         var keyPair;
         openpgp.init();
-        keyPair = openpgp_crypto_generateKeyPair(1,4096);
+        keyPair = openpgp_crypto_generateKeyPair(1,2048);
         $('#generatedPublic').val( openpgp_encoding_armor(4, keyPair.publicKey.string) );
         $('#generatedPrivate').val( openpgp_encoding_armor(5, keyPair.privateKey.string) );
       } else {
